@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewdlort" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu principal del taller N°4 de dlrogramación web.">
+    <meta name="author" content="Bernabé Villegas Arceles">
+    <script src="./js/principal.js"></script>
+    <title>Menu</title>
+</head>
+<body>
+    <script>
+        var h1 = crearTagConTextoAdicionarBody('h1','Guía definitiva: Brave New World')
+        var p = crearTagConTextoAdicionarBody('p','Seleccione un ejercicio para practicar las etiquetas solicitadas en clase.')
+        var h2 = crearTagConTextoAdicionarBody('h2','Ejercicios')
+        var dl = crearTag('dl')
+        var ejercicios = [
+            {
+                href: './html/ejercicio1.html',
+                texto: 'Ejercicio #1',
+                descripcion: 'H1-H6, varios <p>, <strong>, <em>. Tema: HTML como lenguaje de marcado (no programación)'
+            },
+            {
+                href: './html/ejercicio2.html',
+                texto: 'Ejercicio #2',
+                descripcion: 'Genera un número aleatorio entre 1 y 100 y pide al usuario que adivine el número leyéndolo desde una página Web. Proporciona pistas de "más alto" o "más bajo" hasta que el usuario adivine el número. Tema: Manipulación del DOM con JavaScript'
+            },
+            {
+                href: './html/ejercicio3.html',
+                texto: 'Ejercicio #3',
+                descripcion: 'Crea un sistema de registro de estudiantes que permita agregar estudiantes con información como nombre, edad y número de identificación. Luego, permite buscar y mostrar la información de un estudiante dado su número de identificación. Tema: Formularios y manejo de datos en JavaScript'
+            }
+        ]
+        ejercicios.forEach(function(ejercicio){
+            var dt = crearTag('dt')
+            var a = crearTagConTexto('a', ejercicio.texto)
+            a.href = ejercicio.href
+            dt.appendChild(a)
+            dl.appendChild(dt)
+            
+            var dd = crearTagConTexto('dd', ejercicio.descripcion)
+            dl.appendChild(dd)
+        })
+
+        adicionarTagAlBody(dl)
+        dl.innerHTML = diseñarPalabra(dl.innerHTML, 'strong', 'strong');
+        dl.innerHTML = diseñarPalabra(dl.innerHTML, 'em', 'em');
+        
+    </script>
+</body>
+</html>
