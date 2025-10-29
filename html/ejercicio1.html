@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es el ejercicio #1 del taller N°1 de programación web.">
+    <meta name="author" content="Bernabé Villegas Arceles">
+    <script src="../js/ejercicio1.js"></script>
+    <title>Ejercicio #1</title>
+</head>
+<body>
+    <script>
+        var h1 = crearTagConTextoAdicionarBody('h1', 'HTML: Lenguaje de contenido')
+        var br = crearTag('br')
+        adicionarTagAlBody(br)
+        var p1 = crearTagConTextoAdicionarBody('p', 'El HTML (HyperText Markup Language) es el lenguaje estándar para la creación de páginas web. Su función principal es estructurar y dar formato al contenido, permitiendo que los navegadores lo interpreten correctamente. ')
+         p1.innerHTML = diseñarPalabra(p1.innerHTML, 'strong', 'HTML');
+         p1.innerHTML = diseñarPalabra(p1.innerHTML, 'em', 'estructurar y dar formato al contenido');
+        adicionarTagAlBody(br)
+        var h2 = crearTagConTextoAdicionarBody('h2', 'No es un lenguaje de programación')
+        var p2 = crearTagConTextoAdicionarBody('p', 'A menudo, los estudiantes confunden HTML con un lenguaje de programación. Sin embargo, HTML no permite ejecutar lógica, ni crear algoritmos, ni hacer operaciones matemáticas. Su objetivo es describrir el contenido y cómo este se organiza en una página web ')
+        p2.innerHTML = diseñarPalabra(p2.innerHTML, 'strong', 'no permite ejecutar lógica');
+        p2.innerHTML = diseñarPalabra(p2.innerHTML, 'em', 'describrir el contenido');
+        var h3 = crearTagConTextoAdicionarBody('h3', 'El concepto de marcado')
+        var p3 = crearTagConTextoAdicionarBody('p', 'HTML, funciona mediante etiquetas o tags que rodean el contenido y le otorgan el significado. Por ejemplo, la etiqueta <p> indica que el texto es un párrafo, mientras que <h1> indica un encabezado principal. ')
+        p3.innerHTML = diseñarPalabra(p3.innerHTML, 'strong', 'etiquetas');
+        p3.innerHTML = diseñarPalabra(p3.innerHTML, 'em', 'tags');
+        var h4 = crearTagConTextoAdicionarBody('h4', 'Estructura básica')
+        var p4 = crearTagConTextoAdicionarBody('p', 'Una página HTML comienza con la declaración <!DOCTYPE html>, seguida por las secciones <head> y <body>. En el head se definen los metadatos, mientras que en el body se coloca el contenido visible.')
+        p4.innerHTML = diseñarPalabra(p4.innerHTML, 'strong', '&lt;head&gt;');
+        p4.innerHTML = diseñarPalabra(p4.innerHTML, 'strong', '&lt;body&gt;');
+        p4.innerHTML = diseñarPalabra(p4.innerHTML, 'em', 'head');
+        p4.innerHTML = diseñarPalabra(p4.innerHTML, 'em', 'body');
+        var h5 = crearTagConTextoAdicionarBody('h5', 'El rol de HTML en la web')
+        var p5 = crearTagConTextoAdicionarBody('p', 'En el ecosistema web, HTML es el esqueleto. Luego se complementa con CSS para estilos y JavaScript para la lógica y la interactividad.')
+        p5.innerHTML = diseñarPalabra(p5.innerHTML, 'strong', 'CSS');
+        p5.innerHTML = diseñarPalabra(p5.innerHTML, 'strong', 'JavaScript');
+        var h6 = crearTagConTextoAdicionarBody('h6', 'Conclusión')    
+        var p6 = crearTagConTextoAdicionarBody('p', 'Aprender HTML es fundamental para cualquier estudiante de desarrollo web. Recordemos: HTML no es programación, sino un lenguaje de marcado que define la estructura del contenido en la web.')
+        p6.innerHTML = diseñarPalabra(p6.innerHTML, 'strong', 'HTML no es programación,');
+        p6.innerHTML = diseñarPalabra(p6.innerHTML, 'em', 'lenguaje de marcado');
+        adicionarTagAlBody(br)      
+        var a = crearTagConTextoAdicionarBody('a', 'Volver a la página principal')
+        a.href = '../index.html'    
+        adicionarTagAlBody(a)
+       
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejercicio #2">
+    <meta name="author" content="Bernabé Alberto Villegas Arceles">
+    <title>Ejercicio #2</title>
+    <script src="../js/ejercicio2.js"></script>
+</head>
+<body>
+    <script>
+        var h1 = crearTag( "h1", "Ejercicio #2" )
+        añadirTagAlBody(h1)
+        var p = crearTag( "label", "Ingrese un número de 1 al 100 y adivine el número " )
+        añadirTagAlBody(p)
+        var input = crearTag( "input" )
+        input.type = "number"
+        añadirTagAlBody(input)
+        var boton = crearTag( "button", "Verificar" )
+        añadirTagAlBody(boton)
+        var br = crearTag("br" )
+        añadirTagAlBody(br)
+        var output = crearTag( "label", "" )
+        añadirTagAlBody(output)
+        var br2 = crearTag("br" )
+        añadirTagAlBody(br2)
+        var a = crearTag('a', 'Volver al menú principal')
+        a.href = '../index.html'
+        añadirTagAlBody(a)
+        var numeroAleatorio = generarNumeroAleatorio(1, 100)
+        boton.onclick = function() {
+        var numeroIngresado = parseInt(input.value)
+        var mensaje= validarNumero(numeroIngresado, numeroAleatorio, output)
+        output.textContent = mensaje
+        }
+        
+
+
+    </script>    
+</body>
+</html>

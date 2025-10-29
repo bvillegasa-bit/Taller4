@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejercicio #3 del taller N°4 de programación web.">
+    <meta name="author" content="Bernabé Villegas Arceles">
+    <script src="../js/ejercicio3.js"></script>
+    <title>Ejercicio #3</title>
+</head>
+<body>
+    <script>
+        var h1 = adicionarTagAlBody('h1','Registro de Estudiantes')
+        var p = adicionarTagAlBody('p','Agrega estudiantes y busca su información por número de identificación.')
+        var h2 = adicionarTagAlBody('h2','Agregar Estudiante')
+        var formAgregar = crearFormularioAgregarEstudiante()
+        document.body.appendChild(formAgregar)
+        var h2Buscar = adicionarTagAlBody('h2','Buscar Estudiante')
+        var formBuscar = crearFormularioBuscarEstudiante()
+        document.body.appendChild(formBuscar)
+        var br = adicionarTagAlBody('br','')
+        var a = adicionarTagAlBody('a', 'Volver al menú principal')
+        a.href = '../index.html'
+        
+
+    </script>
+
+    
+</body>
+</html>
